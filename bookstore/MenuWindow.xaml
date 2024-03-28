@@ -1,0 +1,38 @@
+﻿<Window x:Class="bookstore.MenuWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:bookstore"
+        mc:Ignorable="d"
+        WindowStartupLocation="CenterScreen"
+        WindowStyle="None"
+        Title="MenuWindow"  Background="#272727" MinHeight="420" MinWidth="440" MaxHeight="420" MaxWidth="440" AllowsTransparency="True">
+
+    <Grid >
+
+        <StackPanel  Background="#272727" HorizontalAlignment="Center" VerticalAlignment="Top" Height="360" Margin="0,35,0,0" >
+            <TextBlock x:Name="User" Text="Пользователь" FontSize="10" Margin="0 40 0 0" Foreground="Gray"/>
+            <Button FontSize="20" Width="400" Content="Книги" Margin="0 30 0 1" Foreground="Gray" Height="29" Background="#202020" Click="Button_Click_Books"></Button>
+            <Button Height="29" Width="400" HorizontalAlignment="Center" Content="Авторы" FontSize="20" Foreground="Gray" Background="#202020" Margin="0 10 0 10" Click="Button_Click_Authors" ></Button>
+            <Button Height="29" Width="400" HorizontalAlignment="Center"  Content="Пользователи" FontSize="20" Foreground="Gray" Background="#202020" Margin="0 10 0 10" Click="Button_Click_Users"></Button>
+            <Button Height="29" Width="400" HorizontalAlignment="Center" Content="Заказы" FontSize="20" Foreground="Gray" Background="#202020" Margin="0 10 0 10" Click="Button_ClickOrders"></Button>
+            <Button Height="29" Width="200" HorizontalAlignment="Center" Content="Выйти" FontSize="19" Foreground="Gray" Background="#202020" Margin="0 30 0 10" Click="Button_ClickExit"></Button>
+
+        </StackPanel>
+
+
+
+        <Border Background="#202020" Height="30" VerticalAlignment="Top" Width="466" MouseLeftButtonDown="Border_MouseLeftButtonDown" HorizontalAlignment="Center">
+            <Grid>
+                <Button Background="Gray" Content="X" Margin="420,0,10,0" Height="30" Click="Button_ClickFullClose" BorderBrush="Gray" >
+                </Button>
+                <Button Background="Gray" Content="—" Margin="379,0,51,0" Height="30" Click="Button_ClickClose" BorderBrush="Gray" >
+                    
+                </Button>
+            </Grid>
+        </Border>
+
+    </Grid>
+
+</Window>

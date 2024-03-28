@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="29f3a6edb1a0441dbdf50daa5d211daf" Name="Diagram1">
+        <EntityTypeShape EntityType="ffModel.Authors" Width="1.5" PointX="0.75" PointY="3.875" />
+        <EntityTypeShape EntityType="ffModel.Books" Width="1.5" PointX="3" PointY="3.25" />
+        <EntityTypeShape EntityType="ffModel.Categories" Width="1.5" PointX="5.25" PointY="2" />
+        <EntityTypeShape EntityType="ffModel.Cities" Width="1.5" PointX="6" PointY="11" />
+        <EntityTypeShape EntityType="ffModel.OrderDetails" Width="1.5" PointX="7.5" PointY="16.75" />
+        <EntityTypeShape EntityType="ffModel.Orders" Width="1.5" PointX="5.25" PointY="16.625" />
+        <EntityTypeShape EntityType="ffModel.Payments" Width="1.5" PointX="7.5" PointY="20" />
+        <EntityTypeShape EntityType="ffModel.Ratings" Width="1.5" PointX="5.25" PointY="7.625" />
+        <EntityTypeShape EntityType="ffModel.Reviews" Width="1.5" PointX="5.25" PointY="4.625" />
+        <EntityTypeShape EntityType="ffModel.Roles" Width="1.5" PointX="0.75" PointY="8" />
+        <EntityTypeShape EntityType="ffModel.ShippingAddresses" Width="1.5" PointX="8.25" PointY="7.5" />
+        <EntityTypeShape EntityType="ffModel.sysdiagrams" Width="1.5" PointX="7.75" PointY="0.75" />
+        <EntityTypeShape EntityType="ffModel.Users" Width="1.5" PointX="3" PointY="7.25" />
+        <AssociationConnector Association="ffModel.FK__Books__AuthorID__29572725" />
+        <AssociationConnector Association="ffModel.FK__OrderDeta__BookI__35BCFE0A" />
+        <AssociationConnector Association="ffModel.FK__Ratings__BookID__3E52440B" />
+        <AssociationConnector Association="ffModel.FK__Reviews__BookID__4222D4EF" />
+        <AssociationConnector Association="ffModel.FK_ShippingAddresses_Cities" />
+        <AssociationConnector Association="ffModel.FK__OrderDeta__Order__5165187F" />
+        <AssociationConnector Association="ffModel.FK__Orders__UserID__52593CB8" />
+        <AssociationConnector Association="ffModel.FK__Payments__OrderI__48CFD27E" />
+        <AssociationConnector Association="ffModel.FK__Ratings__UserID__5535A963" />
+        <AssociationConnector Association="ffModel.FK__Reviews__UserID__571DF1D5" />
+        <AssociationConnector Association="ffModel.FK_Users_Roles" />
+        <AssociationConnector Association="ffModel.FK__ShippingA__UserI__45F365D3" />
+        <AssociationConnector Association="ffModel.BookCategories" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

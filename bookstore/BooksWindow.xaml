@@ -1,0 +1,112 @@
+﻿<Window x:Class="bookstore.BooksWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:bookstore"
+        mc:Ignorable="d"
+        Title="BooksWindow" Background="#272727" MinHeight="720" MinWidth="1024" WindowStartupLocation="CenterScreen"
+        WindowStyle="None">
+    <Grid>
+        
+        <StackPanel Background="#272727" Margin="130,27,0,0" >
+            <WrapPanel>
+                <ListView
+                  x:Name="LvBooks" 
+                  BorderBrush="#272727"
+                  d:ItemsSource="{d:SampleData ItemCount=20}"
+                  ScrollViewer.HorizontalScrollBarVisibility="Disabled"
+                  ScrollViewer.VerticalScrollBarVisibility="Hidden"
+                  Background="#272727" Height="691" Width="860" >
+                    
+                    <ListView.ItemsPanel>
+                        <ItemsPanelTemplate>
+                            <WrapPanel/>
+                        </ItemsPanelTemplate>
+                    </ListView.ItemsPanel>
+                    
+                    <ListView.ItemTemplate>
+                        <DataTemplate>
+                            <Border Width="250"
+                            Height="290"
+                            BorderThickness="1"
+                            BorderBrush="Gray"
+                            Margin="8"
+                            >
+                                <StackPanel>
+                                    <Image Height="150" 
+                                   Width="120"
+                                   Margin="0 8 0 0"/>
+
+                                    <TextBlock Text="{Binding Title}" 
+                                       FontSize="14"
+                                       Foreground="Gray"
+                                       Margin="10 0 0 0"/>
+                                    
+                                    <WrapPanel Margin="10 0 0 0">
+                                        <TextBlock Text="Цена:"
+                                       FontSize="14"
+                                       Foreground="Gray"
+                                       />
+                                        
+                                        <TextBlock Text="{Binding Price}"
+                                       FontSize="14"
+                                       Foreground="Gray"
+                                       />
+                                        
+                                        <TextBlock Text="₽"
+                                       FontSize="14"
+                                       Foreground="Gray"
+                                       />
+                                        
+                                    </WrapPanel>
+                                    
+                                    <WrapPanel Margin="10 0 0 0">
+                                        <TextBlock Text="Количество:"
+                                       FontSize="14"
+                                                   Foreground="Gray"
+                                       />
+                                        
+                                        <TextBlock Text="{Binding StockQuantity}" 
+                                       FontSize="14"
+                                                   Foreground="Gray"
+                                       />
+                                    </WrapPanel>
+
+
+                                    <WrapPanel HorizontalAlignment="Center">
+                                        <Button x:Name="BtnEditProduct" Height="30" Width="30" Margin="0 10 30 0" Background="{x:Null}" BorderThickness="0" Click="BtnEditProduct_Click">
+                                            <Image Source="/res/edit.png" x:Name="editimage"/>
+                                        </Button>
+
+                                        <Button x:Name="BtnAddToCartProduct"                                     
+                                    Height="30"
+                                    Width="30"
+                                    Margin="30 10 0 0"
+                                    Background="{x:Null}"
+                                    BorderThickness="0"
+                                        Click="BtnAddToCartProduct_Click">
+                                            <Image Source="/res/cart.png" x:Name="cartimage"/>
+
+                                        </Button>
+                                    </WrapPanel>
+                                </StackPanel>
+                            </Border>
+
+                        </DataTemplate>
+                    </ListView.ItemTemplate>
+
+                </ListView>
+            </WrapPanel>
+        </StackPanel>
+        <Border Background="#202020" Height="30" VerticalAlignment="Top" Width="1024" MouseLeftButtonDown="Border_MouseLeftButtonDown" >
+            <Grid>
+                <Button Background="Gray" Content="X" Margin="960,0,30,0" Click="Button_ClickFullClose" BorderBrush="Gray"/>
+                <Button Background="Gray" Content="—" Margin="920,0,70,0" Click="Button_ClickClose" BorderBrush="Gray"/>
+            </Grid>
+        </Border>
+        <Button Content="Добавить" HorizontalAlignment="Left" Margin="10,39,0,0" VerticalAlignment="Top" Height="51" Width="115" Background="#191919"   Foreground="Gray" Click="AddButton_Click"/>
+        <Button Content="Удалить" HorizontalAlignment="Left" Margin="10,151,0,0" VerticalAlignment="Top" Height="51" Width="115" Background="#191919"   Foreground="Gray" Click="DelButton_Click"/>
+        <Button Content="Редактировать" HorizontalAlignment="Left" Margin="10,95,0,0" VerticalAlignment="Top" Height="51" Width="115" Background="#191919"   Foreground="Gray"/>
+    </Grid>
+</Window>
